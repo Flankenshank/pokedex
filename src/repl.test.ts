@@ -1,4 +1,4 @@
-import { cleanInput } from "./repl.js";
+import { cleanInput, startREPL } from "./repl.js";
 import { describe, expect, test } from "vitest";
 
 describe.each([
@@ -13,6 +13,14 @@ describe.each([
   {
     input: "pika pika",
     expected: ["pika", "pika"],
+  },
+  {
+    input: "help",
+    expected: ["Displays a help message"],
+  },
+  {
+    input: "exit",
+    expected: ["Closing the Pokedex... Goodbye!"],
   }
   // TODO: more test cases here
 ])("cleanInput($input)", ({ input, expected }) => {
