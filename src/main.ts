@@ -4,7 +4,12 @@ import { initState } from "./state.js";
 
 async function main() {
   const state = initState();
-  startREPL(state);
+  try {
+    await startREPL(state);
+  } catch (err) {
+    console.error("fatal error:", err);
+    process.exit(1);
+  }
 }
 
 main();
