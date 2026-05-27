@@ -13,14 +13,6 @@ describe.each([
   {
     input: "pika pika",
     expected: ["pika", "pika"],
-  },
-  {
-    input: "help",
-    expected: ["Displays a help message"],
-  },
-  {
-    input: "exit",
-    expected: ["Closing the Pokedex... Goodbye!"],
   }
   // TODO: more test cases here
 ])("cleanInput($input)", ({ input, expected }) => {
